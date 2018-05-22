@@ -1,10 +1,22 @@
+$('#email').on('input'), function() {
+  var email = $(this).val();
+  
+  if(email.indexOf('@') == -1 && email.indexOf('.') == -1)
+  {
+   #username-error.show
+  }
+  
+});
+
+
+
 function validatePass()
 {
 var pass = document.getElementById("pword").value;
 	if(pass.length < 6)
 	{
-	alert("Password must contain at least 6 characters")
-	} else true
+	alert("Password must contain at least 6 characters");
+	} else true;
 }
 
 
@@ -14,12 +26,12 @@ function validateEmail()
 	var adress = document.getElementById("email").value;
 	if(adress.indexOf('@') != -1 && email.indexOf('.') != -1)
 	{
-	alert("Insert valid email.")
+	alert("Insert valid email.");
 	return false
 	}
 	else
 	{
-	return true
+	return true;
 	}
 	
 }

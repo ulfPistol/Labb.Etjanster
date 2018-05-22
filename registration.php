@@ -3,8 +3,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets\css\main.css">
+<link rel="stylesheet" href="assets/css/main.css">
 <title>Hemsida för kommentarer</title >
+<script src="/assets/js/main.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
@@ -35,7 +36,6 @@ echo "Connection worked.";
 	<p><button type="submit">Confirm</button></p>
  </form>
  </div>
- 	<script src="/assets/js/main.js"></script>
 </body>
 
 </html>

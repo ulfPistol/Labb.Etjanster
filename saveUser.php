@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   if (strlen(test_input($_POST["pword"])) < 6) {
     $errors["pword"] = "A password is required and has to be at least 6 characters long";
   } else {
-    $password = prepareString($_POST["pword"]));
+    $password = prepareString($_POST["pword"]);
 	$unique_salt = unique_salt();
 	$hash = sha1($unique_salt.$password);
   }
@@ -31,7 +31,7 @@ if(test_input(checkEmail($email)) != $email)
 			if(0 === count($errors))
 			{	
 			insertUser($email, $hash, $unique_salt);
-			echo "Registration succeeded! Please log in." ;
+			echo "Registration successful! Please log in." ;
 			header("Refresh: 5; URL=login.php");
 			}
 			

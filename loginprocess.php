@@ -13,14 +13,14 @@ if ($userHash == $hash)
 		{
 		session_start();
 		$_SESSION['ID']= $email;
-		 echo "Login succeeded!";
-		 header("Refresh: 5; URL=index.php");
+		 echo "Login successful!";
+		 header("Refresh: 1; URL=index.php");
 		 
 		} 
 else
 		{
 		echo "Login failed, please try again"; 
-		header("Refresh: 5; URL=login.php");
+		header("Refresh: 3; URL=login.php");
 		}
 
 

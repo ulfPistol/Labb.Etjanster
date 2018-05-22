@@ -54,7 +54,11 @@ height: 810px;
   z-index: -1;
 } 
   
-  
+#username-error, #password-error {
+color: red; 
+padding: 5px;
+display: none;
+}
   
   
   

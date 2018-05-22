@@ -15,10 +15,10 @@
 <h1>Log in:</h1>	
 <form name="login_Form" method="post" onsubmit="return validateFieldUser(); validateEmail(); validatePass()" action="loginprocess.php">
 	
-	<p><label>Email:</label>	<input type="text" name="mail" id="mail" ></p>
-	
-	<p><label>Password:</label>	<input type="password" name="pwo" id="pwo"></p>
-	
+	<p><label>Email:</label>	<input type="text" name="mail" id="email" ></p>
+	<p class="username-error">This field is required</p>
+	<p><label>Password:</label>	<input type="password" name="pwo" id="pword"></p>
+	<p class="password-error">This field is required</p>
 	<p><button type="submit">Log in</button></p>
  </form>
  <form name="Reg_Form" method="post" action="registration.php">
