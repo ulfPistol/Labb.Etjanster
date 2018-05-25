@@ -1,10 +1,10 @@
 <?php
 function connect()
 		{
-			$uname = "dbtrain_744";
-			$pass = "mpxgwk";
-			$host = "dbtrain.im.uu.se";
-			$dbname = "dbtrain_744";
+			$uname = "root";
+			$pass = "";
+			$host = "localhost";
+			$dbname = "etjanster";
 
 			$connection = new mysqli($host, $uname, $pass, $dbname);
 

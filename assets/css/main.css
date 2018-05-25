@@ -57,7 +57,7 @@ height: 810px;
   z-index: -1;
 }
 
-#email_error, #password_error, #repassword_error {
+#email_error, #password_error, #repassword_error, #comment_error {
 color: #d9534f;
 padding: 1px;
 }

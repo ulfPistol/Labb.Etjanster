@@ -23,8 +23,16 @@
    <p><button>Register</button></p>
    </form>
    </div>
-
-
+//för dynamisk uppdatering 
+	 <script>
+ 	$(document).ready(function()
+ 	{
+ 		$("#send_comment").click(function()
+ 		{
+ 			$("#comments").load("db.php");
+ 		});
+ 	});
+ 	</script>
 
 
 </body>

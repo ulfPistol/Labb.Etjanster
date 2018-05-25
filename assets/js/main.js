@@ -3,7 +3,11 @@ $(document).ready(function() {
   $("#email_error").hide();
   $("#password_error").hide();
   $("#repassword_error").hide();
+  $("#comment_error").hide();
 
+
+
+  var error_comment = false;
   var error_email = false;
   var error_password = false;
   var error_repassword = false;
@@ -20,8 +24,24 @@ $(document).ready(function() {
     check_retype_password();
   });
 
+  $("#kommentar").on("input", function() {
+    check_comment();
+  });
 
-
+  function check_comment()
+  {
+        var comment = $.trim($("#kommentar").val());
+        if(comment.length > 1)
+        {
+          $("#comment_error").hide();
+          error_comment = false;
+        }
+        else
+        {
+          $("#comment_error").show();
+          error_comment = true;
+        }
+  }
   function check_email()
    {
     var email = $("#email").val();
@@ -66,6 +86,22 @@ $(document).ready(function() {
             error_repassword = false;
           }
   }
+
+$("#commentForm").submit(function()
+{
+  error_comment = false;
+  check_comment();
+
+  if(error_comment == false)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+});
+
 
 
 $("#login").submit(function()
