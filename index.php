@@ -6,14 +6,23 @@
 	<title>Hemsida för kommentarer</title >
 	<script src="assets/js/main.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	$(document).ready(function()
+	{
+		$("#send_comment").click(function()
+		{
+			$("#comments").load("db.php");
+		});
+	});
+	</script>
 </head>
 <body>
 
 <?php
 include 'db.php';
 session_start();
-if (isset($_SESSION['ID'])) 
-		{ 
+if (isset($_SESSION['ID']))
+		{
 		echo "Inloggad som: ";
 		echo $_SESSION['ID']; ?>
 		<div class="main">
@@ -22,23 +31,23 @@ if (isset($_SESSION['ID']))
  action= "saveComment.php">
 
 	<p><textarea type="text" id="kommentar" name="kommentar" ></textarea></p>
-	
-	<p><button type="submit">Send!</button></p>
+
+	<p><button type="submit" id="send_comment">Send!</button></p>
  </form>
  <h1> Comments: </h1>
-<div class="commentBox">
+<div class="commentBox" id="comments">
  <?php
 getComments();
 ?>
 </div>
 
  </div>
- <form name="logout_form" method="post" 
+ <form name="logout_form" method="post"
  action= "logout.php">
-	
+
 	<p><button type="submit">Logout</button></p>
  </form>
-<?php	
+<?php
 	}
 
  else

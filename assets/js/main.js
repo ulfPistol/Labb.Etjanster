@@ -1,76 +1,109 @@
-$('#email').on('input'), function() {
-  var email = $(this).val();
-  
-  if(email.indexOf('@') == -1 && email.indexOf('.') == -1)
+$(document).ready(function() {
+
+  $("#email_error").hide();
+  $("#password_error").hide();
+  $("#repassword_error").hide();
+
+  var error_email = false;
+  var error_password = false;
+  var error_repassword = false;
+
+  $("#password").on("input", function() {
+    check_password();
+  });
+
+  $("#email").on("input", function() {
+    check_email();
+  });
+
+  $("#repassword").on("input", function() {
+    check_retype_password();
+  });
+
+
+
+  function check_email()
+   {
+    var email = $("#email").val();
+    if(email.indexOf('@') != -1 && email.indexOf('.') != -1)
+          {
+                $("#email_error").hide();
+                error_email = false;
+          }
+    else  {
+                $("#email_error").show();
+                error_email = true;
+          }
+   }
+
+  function check_password()
   {
-   #username-error.show
+          var pass = $("#password").val().length;
+          if(pass > 6)
+          {
+            $("#password_error").hide();
+            error_password = false;
+          }
+          else
+          {
+            $("#password_error").show();
+            error_password = true;
+          }
   }
-  
+
+  function check_retype_password()
+  {
+          var pass = $("#password").val();
+          var repass = $("#repassword").val();
+          if(repass != pass)
+          {
+            $("#repassword_error").show();
+            error_repassword = true;
+          }
+          else
+          {
+            $("#repassword_error").hide();
+            error_repassword = false;
+          }
+  }
+
+
+$("#login").submit(function()
+{
+  error_email = false;
+  error_password = false;
+
+  check_email();
+  check_password();
+
+  if(error_email == false && error_password == false)
+    {
+      return true;
+    }
+  else
+    {
+      return false;
+    }
 });
 
-
-
-function validatePass()
+$("#register").submit(function()
 {
-var pass = document.getElementById("pword").value;
-	if(pass.length < 6)
-	{
-	alert("Password must contain at least 6 characters");
-	} else true;
-}
+  error_email = false;
+  error_password = false;
+  error_repassword = false;
 
+  check_email();
+  check_password();
+  check_retype_password();
 
-function validateEmail()
-{
+  if(error_email == false && error_password == false)
+    {
+      return true;
+    }
+  else
+    {
+      return false;
+    }
+});
 
-	var adress = document.getElementById("email").value;
-	if(adress.indexOf('@') != -1 && email.indexOf('.') != -1)
-	{
-	alert("Insert valid email.");
-	return false
-	}
-	else
-	{
-	return true;
-	}
-	
-}
-
-function validateFields()
-{
-console.log("test");
-	var kommentar = document.getElementById("kommentar").value;
-
-	if(kommentar.trim().length < 1)
-	{
-	alert("input kommentar");
-	}
-	else
-	{
-	true;
-	}
-}
-function validateFieldsUser()
-{
-	var email = document.getElementById("email").value;
-	var pass = document.getElementById("pword").value;
-	
-	if(pass.trim().length < 1)
-	{
-	alert("Input password!")
-	}
-	else if(email.trim().length < 1)
-	{
-	alert("Input email!")
-	}
-	else
-	{
-	true
-	}
-}
-
-
-
-
-
-
+  });

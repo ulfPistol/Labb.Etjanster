@@ -1,4 +1,4 @@
-<?php 
+<?php
 function connect()
 		{
 			$uname = "dbtrain_744";
@@ -11,18 +11,19 @@ function connect()
 		if ($connection->connect_error)
 			{
 			   return die("Connection failed: ".$connection.connect_error);
-			} 
+			}
 			return $connection;
 		}
 //fixar till strängar
-function test_input($data) 
+function test_input($data)
 		{
 		  $data = trim($data);
 		  $data = stripslashes($data);
 		  $data = htmlspecialchars($data);
 		  return $data;
 		}
-function unique_salt() 
+		//Funktion som randomiserar ett unikt salt i registreringsprocessen
+function unique_salt()
 		{
 			return substr(sha1(mt_rand()),0,22);
 		}
@@ -71,7 +72,7 @@ function getComments()
 			}
 		}
 
-		
+
 
 
 

@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
 	text-align: center;
-	
+
 
 	}
 
@@ -32,15 +32,18 @@ h1
   transform: translate(-50%, -50%);
 }
 
+
+
 .main{
 background: linear-gradient(to top, #0d9dbf 30%, #0d6a89 100%);
-width: 400px; 
+width: 400px;
 margin: 0 auto;
 border-radius: 15px;
 /*box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 height: 810px;
+
   }
- 
+
 .main::after {
   border-radius: 15px 15px 300px 300px;
   box-shadow: 0 0 29px black;
@@ -52,16 +55,15 @@ height: 810px;
   top: 51px;
   width: 396px;
   z-index: -1;
-} 
-  
-#username-error, #password-error {
-color: red; 
-padding: 5px;
-display: none;
 }
-  
-  
-  
+
+#email_error, #password_error, #repassword_error {
+color: #d9534f;
+padding: 1px;
+}
+
+
+
 .commentBox{
 background-color: #fff;
 border-style: solid;
@@ -85,7 +87,7 @@ margin-bottom: 4px;
 text-align: center;
 }
 
-		
+
 .box {
   height: 100px;
   width: 100px;
