@@ -1,8 +1,5 @@
 <?php
- 
- session_start();
- unset($_SESSION['ID']); 
- header("location: login.php"); 
-
-
+  session_start();
+  unset($_SESSION['ID']); //stänger sessionen och skickar till loginpage
+  header("location: login.php");
 ?>

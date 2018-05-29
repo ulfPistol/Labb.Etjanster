@@ -24,6 +24,10 @@
 
 	<p><button type="submit">Confirm</button></p>
  </form>
+</form>
+<form name="Reg_Form" method="post" action="login.php">
+<p><button>Login</button></p>
+</form>
  </div>
 </body>
 
