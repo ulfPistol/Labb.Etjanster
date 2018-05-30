@@ -45,9 +45,7 @@ $(document).ready(function()
   function check_email()
    {
      var email = $("#email").val();
-     var checkAt = email.indexOf('@');
-     var checkDot = email.indexOf('.');
-     if (checkAt < 1 || checkDot < 1 || checkDot < checkAt)
+     if(email.indexOf('@') != -1 && email.indexOf('.') != -1)
        {
          $("#email_error").hide();
          error_email = false;
