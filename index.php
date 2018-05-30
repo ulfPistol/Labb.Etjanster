@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<title>Hemsida för kommentarer</title >
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
 	</head>
 	<body>
@@ -22,11 +22,12 @@
 
 			<div class="main2">
 				<h1> Comment on anything you like!</h1>
-				<form id="commentForm" method="post" action= "saveComment.php">
+				<form id="commentForm" method="post" action="saveComment.php">
 						<p><textarea type="text" id="kommentar" name="kommentar" ></textarea></p>
 						<span id="comment_error">Write a comment</span>
 						<p><button type="submit" id="send_comment">Send!</button></p>
 	 			</form>
+
 		 			<h1> Comments: </h1>
 					<div class="commentBox" id="comments">
 						 <?php

@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function()
+{
   $("#email_error").hide();
   $("#password_error").hide();
   $("#repassword_error").hide();

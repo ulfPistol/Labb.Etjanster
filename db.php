@@ -64,7 +64,7 @@
 				$result = connect()->query($query);
 				while ( $row = $result->fetch_assoc())
 				{
-					echo "<div class='comments'>";
+					echo "<div class='comments' id='idcomments'>";
 						echo $row["email"].": ";
 						echo $row["timestamp"]."<br>";
 						echo $row["comment"]."<br>";

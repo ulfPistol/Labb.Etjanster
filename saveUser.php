@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")//checkar om saker har skickats via $_P
 				}
 			else
 				{
-					echo "Email does already exist." ;
+					echo "Email already exists." ;
 					header("Refresh: 5; URL=registration.php");
 				}
 }
